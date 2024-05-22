@@ -28,7 +28,7 @@ function isPasswordValid() {
 function toggleEmailErrors() {
     const email = form.email().value;
 
-    form.emailRequiredError().style.display = email ? 'none' : "block";
+    form.emailRequiredError().style.display = email ? "none" : "block";
 
     // if (!email) {
     //     form.emailRequiredError().style.display = "block";
