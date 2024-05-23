@@ -64,11 +64,11 @@ function toggleButtonsDisable() {
 }
 
 const form = {
-    email: () => document.getElementById('email'),
-    password: () => document.getElementById('password'),
-    loginButton: () => document.getElementById('login-button'),
-    emailInvalidError: () => document.getElementById('email-invalid-error'),
-    emailRequiredError: () => document.getElementById('email-required-error'),
-    recoverPassword: () => document.getElementById('recover-password-button'),
-    passwordRequiredError: () => document.getElementById('password-required-error')
-}
+    email: () => document.getElementById("email"),
+    emailInvalidError: () => document.getElementById("email-invalid-error"),
+    emailRequiredError: () => document.getElementById("email-required-error"),
+    loginButton: () => document.getElementById("login-button"),
+    password: () => document.getElementById("password"),
+    passwordRequiredError: () => document.getElementById("password-required-error"),
+    recoverPasswordButton: () => document.getElementById("recover-password-button"),
+} 
