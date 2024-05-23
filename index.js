@@ -9,6 +9,14 @@ function onChangePassword() {
     toggleEmailErrors();
 }
 
+function login() {
+    window.location.href = "pages/home/home.html";
+}
+
+function register() {
+    window.location.href = "pages/register/register.html";
+}
+
 function isEmailValid() {
     const email = form.email().value;
     if (!email) {
@@ -62,7 +70,7 @@ function toggleButtonsDisable() {
 const form = {
     email: () => document.getElementById('email'),
     password: () => document.getElementById('password'),
-    loginButton: () => document.getElementById('login'),
+    loginButton: () => document.getElementById('login-button'),
     emailInvalidError: () => document.getElementById('email-invalid-error'),
     emailRequiredError: () => document.getElementById('email-required-error'),
     recoverPassword: () => document.getElementById('recover-password-button'),
