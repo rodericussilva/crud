@@ -10,7 +10,8 @@ function onChangePassword() {
 }
 
 function login() {
-
+    showLoading();
+    
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
     ).then(() => {

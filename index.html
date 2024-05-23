@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="global.css">
+    
 </head>
-<body>
+<body class="centralize">
     <form>
         <div class="form-field">
             <div><label>Email</label></div>
@@ -31,29 +30,34 @@
             <button type="button" class="outline" onclick="register()">Registrar</button>
         </div>
     </form>
-    
-    <script src="index.js"></script>
-    <script src="validations.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDvUXZ4WoOH3S4jnSBeKUp15TRHgB780nU",
-            authDomain: "controle-gastos-fa8d9.firebaseapp.com",
-            projectId: "controle-gastos-fa8d9",
-            storageBucket: "controle-gastos-fa8d9.appspot.com",
-            messagingSenderId: "802066167205",
-            appId: "1:802066167205:web:dff2a35e2daff527a4644c"
-        };
-        firebase.inicializeApp(firebaseConfig);
-        
-        console.log("antes")
-        firebase.auth().signInWinthEmailAndPassword("voc.rodrigo@gmail.com", "123456").then(response => {
-            console.log("sucesso", response);
-        }).catch(error => {
-            console.log("erro", error);
-        });
-        console.log("depois")
-    </script>
 </body>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="global.css">
+    
+<script src="index.js"></script>
+<script src="validations.js"></script>
+<script src="loading.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDvUXZ4WoOH3S4jnSBeKUp15TRHgB780nU",
+        authDomain: "controle-gastos-fa8d9.firebaseapp.com",
+        projectId: "controle-gastos-fa8d9",
+        storageBucket: "controle-gastos-fa8d9.appspot.com",
+        messagingSenderId: "802066167205",
+        appId: "1:802066167205:web:dff2a35e2daff527a4644c"
+    };
+    firebase.inicializeApp(firebaseConfig);
+        
+    console.log("antes")
+    firebase.auth().signInWinthEmailAndPassword("voc.rodrigo@gmail.com", "123456").the(response => {
+        console.log("sucesso", response);
+    }).catch(error => {
+        console.log("erro", error);
+    });
+    console.log("depois")
+</script>
+
 </html>
