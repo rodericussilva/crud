@@ -46,6 +46,14 @@
             appId: "1:802066167205:web:dff2a35e2daff527a4644c"
         };
         firebase.inicializeApp(firebaseConfig);
+        
+        console.log("antes")
+        firebase.auth().signInWinthEmailAndPassword("voc.rodrigo@gmail.com", "123456").then(response => {
+            console.log("sucesso", response);
+        }).catch(error => {
+            console.log("erro", error);
+        });
+        console.log("depois")
     </script>
 </body>
 </html>
