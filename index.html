@@ -10,22 +10,22 @@
 </head>
 <body>
     <form>
-        <div class="forms-field">
+        <div class="form-field">
             <div><label>Email</label></div>
-            <input type="email" name="email" onchange="onChangeEmail()" id="email" placeholder="seu@email.com">
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
             <div class="error" id="email-required-error">Email obrigatório</div>
             <div class="error" id="email-invalid-error">Email inválido</div>
         </div>
-        <div class="forms-field">
+        <div class="form-field">
             <div><label>Senha</label></div>
-            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
             <div class="error" id="password-required-error">Senha obrigatória</div>
         </div>
         <div>
-            <button type="button" class="clear" id="recover-password-button">Recuperar senha</button>
+            <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
         </div>
         <div>
-            <button type="button" id="login-button" class="solid" onclick="login()">Entrar</button>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
         </div>
         <div>
             <button type="button" class="outline" onclick="register()">Registrar</button>
