@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(user => {
 })
 
 function newTransaction() {
-    window.location.href = "../transaction/transaction.html";
+    window.location.href = "../transactions/transactions.html";
 }
 
 function findTransactions(user) {
@@ -53,7 +53,7 @@ function createTransactionListItem(transaction) {
     li.classList.add(transaction.type);
     li.id = transaction.uid;
     li.addEventListener('click', () => {
-        window.location.href = "../transaction/transaction.html?uid=" + transaction.uid;
+        window.location.href = "../transactions/transactions.html?uid=" + transaction.uid;
     })
     return li;
 }
